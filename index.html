@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DecHex 技术支持</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6e6e73;
+    --line: #e5e5ea;
+    --accent: #5a5fd0;
+    --card: #f7f7fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121216;
+      --text: #f2f2f7;
+      --muted: #9a9aa2;
+      --line: #2c2c33;
+      --accent: #8b91eb;
+      --card: #1c1c22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 20px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC",
+          "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  header { margin-bottom: 40px; }
+  .icon {
+    width: 64px; height: 64px; border-radius: 15px;
+    background: linear-gradient(135deg, #8b91eb, #585ccd);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .icon span {
+    color: #fff; font-weight: 700; font-size: 17px;
+    line-height: 1.05; letter-spacing: .2px;
+  }
+  h1 { font-size: 28px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -.3px; }
+  .sub { color: var(--muted); margin: 0; font-size: 15px; }
+  h2 { font-size: 19px; margin: 40px 0 12px; letter-spacing: -.2px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--card); border-radius: 14px;
+    padding: 20px 22px; margin: 24px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .qa { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+  .qa:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  .q { font-weight: 600; margin: 0 0 4px; }
+  .a { margin: 0; color: var(--muted); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: .92em;
+  }
+  footer {
+    max-width: 680px; margin: 56px auto 0; padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="icon"><span>Dec<br>Hex</span></div>
+    <h1>DecHex 技术支持</h1>
+    <p class="sub">开发者计算器 · 十进制十六进制同屏对照</p>
+  </header>
+
+  <div class="card">
+    <p>遇到问题或有功能建议，欢迎发邮件到：</p>
+    <p><a href="mailto:232235382@qq.com">232235382@qq.com</a></p>
+    <p style="color:var(--muted);font-size:15px;margin-bottom:0;">通常会在 2 个工作日内回复。</p>
+  </div>
+
+  <h2>常见问题</h2>
+
+  <div class="qa">
+    <p class="q">为什么我输入 1A，下面那张卡片显示 NULL？</p>
+    <p class="a">下面那张卡片是把输入当作十进制来解释的，而 <code>1A</code> 不是合法的十进制数字（十进制只有 0–9）。上面那张卡片会给出它的十六进制解释。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">需要切换进制吗？</p>
+    <p class="a">不需要。两张卡片会同时给出两种解释，你想看哪种就看哪张。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">怎么切换主题？</p>
+    <p class="a">长按键盘左侧的 <code>&lt;</code> 或右侧的 <code>&gt;</code> 按钮。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">怎么关闭计算结果记忆？</p>
+    <p class="a">长按 <code>CLR</code> 按钮，会提示「计算结果记忆已关闭」。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">计算结果怎么复制？</p>
+    <p class="a">长按结果数字，在弹出的菜单里选「复制」。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">数据会上传吗？</p>
+    <p class="a">不会。本应用完全不联网，所有数据只保存在你的设备上。</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 DecHex · <a href="privacy.html">隐私政策</a>
+</footer>
+</body>
+</html>
