@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DecHex 技术支持</title>
+<title>DecHex 技术支持 · Support</title>
 <style>
   :root {
     --bg: #ffffff;
@@ -64,6 +64,9 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: .92em;
   }
+  .lang { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  section + section { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--line); }
+  section h2 + .qa { border-top: none; padding-top: 0; margin-top: 0; }
   footer {
     max-width: 680px; margin: 56px auto 0; padding-top: 20px;
     border-top: 1px solid var(--line);
@@ -73,6 +76,9 @@
 </head>
 <body>
 <main>
+  <p class="lang"><a href="#zh">中文</a> · <a href="#en">English</a></p>
+
+  <section id="zh" lang="zh-CN">
   <header>
     <div class="icon"><span>Dec<br>Hex</span></div>
     <h1>DecHex 技术支持</h1>
@@ -98,13 +104,43 @@
   </div>
 
   <div class="qa">
+    <p class="q">位运算按多少位计算？</p>
+    <p class="a">默认 64 位有符号。点开发者计算器右上角的芯片图标，可以改成 8、16、32、64 位，有符号或无符号。加减乘除不受位宽限制，按任意精度计算。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">怎么逐位修改一个数？</p>
+    <p class="a">点卡片里的二进制那一行，会打开位编辑器，点任意一位即可翻转。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">基础计算器怎么切换到科学计算器？</p>
+    <p class="a">点基础计算器右上角的网格按钮，在简单模式和科学模式之间切换；开发者计算器的同一个按钮用来切换简单布局和完整布局。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">数字太长显示不全怎么办？</p>
+    <p class="a">点一下被截断的数字，会弹出完整内容，可以选中或一键复制。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">怎么添加小组件和控制中心按钮？</p>
+    <p class="a">需要 iOS 18 及以上。长按主屏幕或锁定屏幕空白处，点「编辑」添加 DecHex 小组件；在控制中心点左上角的 + 添加 DecHex 按钮。小组件可以选择打开哪个页面，颜色跟随 App 主题。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">怎么用 Siri？</p>
+    <p class="a">需要 iOS 16 及以上。可以说「用 DecHex 转换进制」或「用 DecHex 计算」，也可以在「快捷指令」App 里使用 DecHex 的「转换进制」「计算表达式」两个操作。</p>
+  </div>
+
+  <div class="qa">
     <p class="q">怎么切换主题？</p>
-    <p class="a">长按键盘左侧的 <code>&lt;</code> 或右侧的 <code>&gt;</code> 按钮。</p>
+    <p class="a">长按开发者计算器键盘上的 <code>&lt;</code> 或 <code>&gt;</code> 按钮；也可以在小工具页右上角的设置里挑选。</p>
   </div>
 
   <div class="qa">
     <p class="q">怎么关闭计算结果记忆？</p>
-    <p class="a">长按 <code>CLR</code> 按钮，会提示「计算结果记忆已关闭」。</p>
+    <p class="a">长按 <code>CLR</code> 按钮，会提示「计算结果记忆已关闭」，同时清除已保存的状态和历史。</p>
   </div>
 
   <div class="qa">
@@ -116,10 +152,84 @@
     <p class="q">数据会上传吗？</p>
     <p class="a">不会。本应用完全不联网，所有数据只保存在你的设备上。</p>
   </div>
+  </section>
+
+  <section id="en" lang="en">
+  <h1>DecHex Support</h1>
+  <p class="sub">Programmer calculator · hex and decimal side by side</p>
+
+  <div class="card">
+    <p>Questions or suggestions? Email us:</p>
+    <p><a href="mailto:232235382@qq.com">232235382@qq.com</a></p>
+    <p style="color:var(--muted);font-size:15px;margin-bottom:0;">We usually reply within 2 business days.</p>
+  </div>
+
+  <h2>FAQ</h2>
+
+  <div class="qa">
+    <p class="q">Why does the bottom card show NULL when I type 1A?</p>
+    <p class="a">The bottom card reads your input as a decimal number, and <code>1A</code> is not a valid decimal number. The top card shows its hexadecimal interpretation.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Do I need to switch number bases?</p>
+    <p class="a">No. Both cards show both interpretations at the same time; just read the one you need.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">What word size do bitwise operations use?</p>
+    <p class="a">64-bit signed by default. Tap the chip icon at the top right of the Programmer Calculator to choose 8, 16, 32 or 64 bits, signed or unsigned. Addition, subtraction, multiplication and division always use arbitrary precision.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I edit individual bits?</p>
+    <p class="a">Tap the binary row in a card to open the bit editor, then tap any bit to flip it.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I open the scientific calculator?</p>
+    <p class="a">Tap the grid button at the top right of the Basic Calculator to switch between simple and scientific mode. On the Programmer Calculator the same button switches between the simple and full keypad.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">A number is too long to fit. How can I see it?</p>
+    <p class="a">Tap the truncated number to see it in full, select it or copy it.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I add the widgets and the Control Center button?</p>
+    <p class="a">iOS 18 or later is required. Touch and hold an empty area of the Home Screen or Lock Screen, tap Edit and add a DecHex widget; in Control Center, tap + at the top left to add the DecHex button. Each widget can open a page of your choice and follows the app theme.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I use Siri?</p>
+    <p class="a">iOS 16 or later is required. Say “Convert a number with DecHex” or “Calculate with DecHex”, or use the Convert Base and Calculate Expression actions in the Shortcuts app.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I change the theme?</p>
+    <p class="a">Long press the <code>&lt;</code> or <code>&gt;</code> key on the Programmer Calculator, or pick one in Settings (the gear icon on the Tools page).</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I turn off result memory?</p>
+    <p class="a">Long press <code>CLR</code>. A message confirms that result memory is off, and the saved state and history are cleared.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">How do I copy a result?</p>
+    <p class="a">Long press the number and choose Copy.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Is any data uploaded?</p>
+    <p class="a">No. The app never uses the network, and all data stays on your device.</p>
+  </div>
+  </section>
 </main>
 
 <footer>
-  © 2026 DecHex · <a href="privacy.html">隐私政策</a>
+  © 2026 DecHex · <a href="privacy.html">隐私政策 Privacy Policy</a>
 </footer>
 </body>
 </html>

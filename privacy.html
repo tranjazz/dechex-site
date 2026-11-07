@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DecHex 隐私政策</title>
+<title>DecHex 隐私政策 · Privacy Policy</title>
 <style>
   :root {
     --bg: #ffffff;
@@ -55,6 +55,8 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     background: var(--card); padding: 2px 6px; border-radius: 5px; font-size: .92em;
   }
+  .lang { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  section + section { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--line); }
   footer {
     max-width: 680px; margin: 56px auto 0; padding-top: 20px;
     border-top: 1px solid var(--line);
@@ -64,10 +66,13 @@
 </head>
 <body>
 <main>
-  <h1>DecHex 隐私政策</h1>
-  <p class="updated">最后更新日期：2026 年 11 月 1 日</p>
+  <p class="lang"><a href="#zh">中文</a> · <a href="#en">English</a></p>
 
-  <p>DecHex（以下简称「本应用」）尊重并保护你的隐私。本政策说明本应用如何处理你的信息。</p>
+  <section id="zh" lang="zh-CN">
+  <h1>DecHex 隐私政策</h1>
+  <p class="updated">最后更新日期：2026 年 11 月 7 日（适用于 1.0.6 及以后的版本）</p>
+
+  <p>DecHex（以下简称「本应用」，包括其小组件和控制中心按钮）尊重并保护你的隐私。本政策说明本应用如何处理你的信息。</p>
 
   <h2>一、我们不收集任何个人信息</h2>
   <p>本应用不收集、不上传、不存储任何可识别你个人身份的信息。具体而言：</p>
@@ -75,45 +80,95 @@
     <li>本应用<strong>不联网</strong>，没有任何网络请求，不存在把数据发送到服务器的能力</li>
     <li>不要求注册、不要求登录、不索取手机号、邮箱或任何账号信息</li>
     <li>不接入任何第三方统计、广告、崩溃收集或社交 SDK</li>
-    <li>不读取你的通讯录、相册、位置、麦克风、相机、健康等任何敏感数据</li>
+    <li>不申请任何系统权限，不读取你的通讯录、相册、位置、麦克风、相机、健康等任何敏感数据</li>
   </ul>
 
   <h2>二、本应用在本机保存的内容</h2>
-  <p>为了在你下次打开应用时恢复上次的计算状态，本应用会在<strong>你自己的设备本地</strong>保存以下内容：</p>
+  <p>为了在你下次打开应用时恢复上次的状态，本应用会在<strong>你自己的设备本地</strong>保存以下内容：</p>
   <ul>
-    <li>当前输入的数字、运算符与计算结果</li>
-    <li>你选择的配色主题、数字字体、千分位分隔符开关</li>
-    <li>你选择的应用图标配色</li>
-    <li>按键震动、按键声音的开关状态</li>
-    <li>计算历史（按下等号时自动记录，两个计算器各一份）</li>
-    <li>上次停留的页面（基础计算器 / 开发者计算器 / 小工具）</li>
-    <li>计算结果记忆开关的状态</li>
+    <li>当前输入的数字、运算符与计算结果，计算历史（两个计算器各一份）</li>
+    <li>配色主题、数字字体、千分位分隔符、应用图标配色、键盘布局、位宽等偏好设置</li>
+    <li>按键震动、按键声音、计算结果记忆的开关状态</li>
+    <li>上次停留的页面</li>
   </ul>
-  <p>这些数据通过 iOS 系统提供的本地存储（UserDefaults）保存在应用沙盒内，<strong>不会离开你的设备</strong>，我们无法访问。你可以随时通过长按 <code>CLR</code> 关闭记忆功能（会立即清除已保存的状态），或直接卸载本应用来彻底删除全部数据。</p>
+  <p>这些数据通过 iOS 系统提供的本地存储（UserDefaults）保存在应用沙盒内，<strong>不会离开你的设备</strong>，我们无法访问。你可以随时长按 <code>CLR</code> 关闭记忆功能（会立即清除已保存的计算状态和历史），或直接卸载本应用来彻底删除全部数据。</p>
 
-  <h2>三、剪贴板</h2>
-  <p>长按计算结果会弹出「复制 / 粘贴」菜单：选择复制时，本应用会把该结果写入系统剪贴板；选择粘贴时，本应用会读取剪贴板中的文本，解析为数字后填入输入区。这两种操作都由你主动触发，除此之外本应用不会访问剪贴板。</p>
+  <h2>三、小组件与控制中心</h2>
+  <p>为了让主屏幕、锁定屏幕小组件和控制中心按钮的颜色跟随你选择的主题，本应用会把<strong>当前主题的几个颜色值</strong>写入本机的 App Group 共享存储，供本应用自己的小组件读取。共享的只有颜色值，不包含任何计算内容，也不会离开你的设备。</p>
 
-  <h2>四、不需要服务器，也不涉及 ICP 备案</h2>
+  <h2>四、Siri 与快捷指令</h2>
+  <p>你可以通过 Siri 或「快捷指令」让本应用转换进制、计算表达式。你说出或输入的数字和表达式由系统交给本应用，<strong>在本机完成计算</strong>后把结果返回给你，本应用不会保存或上传这些内容。语音识别由 Apple 的 Siri 处理，适用 Apple 的隐私政策。</p>
+
+  <h2>五、剪贴板</h2>
+  <p>只有在你主动操作时，本应用才会访问剪贴板：点按「复制」按钮或在长按菜单中选择「复制」时，把对应内容写入剪贴板；在长按菜单中选择「粘贴」时，读取剪贴板中的文本并解析为数字。除此之外本应用不会读取剪贴板。</p>
+
+  <h2>六、不需要服务器，也不涉及 ICP 备案</h2>
   <div class="card">
     <p>本应用没有任何服务器、后端接口或域名，全部计算在设备本地完成。因此不存在需要部署的在线服务，也不存在需要办理 ICP 备案的网站或域名。</p>
   </div>
 
-  <h2>五、儿童隐私</h2>
+  <h2>七、儿童隐私</h2>
   <p>本应用不收集任何用户数据，因此也不存在收集儿童个人信息的情况。年龄分级为 4+。</p>
 
-  <h2>六、数据共享</h2>
+  <h2>八、数据共享</h2>
   <p>由于本应用不收集数据，不存在向任何第三方出售、出租或共享用户数据的情形。</p>
 
-  <h2>七、政策变更</h2>
+  <h2>九、政策变更</h2>
   <p>如果未来版本引入需要处理数据的新功能，我们会在本页面更新本政策，并在应用更新说明中提示。</p>
 
-  <h2>八、联系我们</h2>
+  <h2>十、联系我们</h2>
   <p>如对本政策有任何疑问，请联系：<a href="mailto:232235382@qq.com">232235382@qq.com</a></p>
+  </section>
+
+  <section id="en" lang="en">
+  <h1>DecHex Privacy Policy</h1>
+  <p class="updated">Last updated: November 7, 2026 (applies to version 1.0.6 and later)</p>
+
+  <p>DecHex (the "app", including its widgets and Control Center button) respects your privacy. This policy explains how the app handles your information.</p>
+
+  <h2>1. We do not collect personal information</h2>
+  <ul>
+    <li>The app <strong>does not use the network</strong>. It makes no network requests and cannot send data to any server</li>
+    <li>No sign-up, no login, and no phone number, email address or account information is requested</li>
+    <li>No third-party analytics, advertising, crash reporting or social SDKs are included</li>
+    <li>No system permissions are requested. Contacts, photos, location, microphone, camera, health and other sensitive data are never accessed</li>
+  </ul>
+
+  <h2>2. What the app stores on your device</h2>
+  <p>To restore your work the next time you open it, the app stores the following <strong>locally on your own device</strong>:</p>
+  <ul>
+    <li>The current input, operators and results, and the calculation history of each calculator</li>
+    <li>Preferences such as theme, number font, thousands separator, app icon color, keypad layout and word size</li>
+    <li>The on/off state of key haptics, key sounds and result memory</li>
+    <li>The page you last used</li>
+  </ul>
+  <p>This data is kept in the app's sandbox using the iOS local storage (UserDefaults). <strong>It never leaves your device</strong> and we cannot access it. Long press <code>CLR</code> to turn off result memory (this immediately clears the saved state and history), or delete the app to remove all data.</p>
+
+  <h2>3. Widgets and Control Center</h2>
+  <p>So that the Home Screen and Lock Screen widgets and the Control Center button match your theme, the app writes <strong>a few color values of the current theme</strong> to an on-device App Group container that only the app's own widgets read. No calculation data is shared, and nothing leaves your device.</p>
+
+  <h2>4. Siri and Shortcuts</h2>
+  <p>You can ask Siri or use the Shortcuts app to convert number bases or calculate expressions. The numbers and expressions you provide are passed to the app by the system, <strong>calculated on your device</strong>, and the result is returned to you. The app does not save or upload them. Speech recognition is handled by Apple's Siri and is subject to Apple's privacy policy.</p>
+
+  <h2>5. Clipboard</h2>
+  <p>The app accesses the clipboard only when you ask it to: tapping a Copy button or choosing Copy from a long-press menu writes that value to the clipboard, and choosing Paste reads the clipboard text and parses it as a number. The clipboard is not read at any other time.</p>
+
+  <h2>6. Children's privacy</h2>
+  <p>The app collects no user data, so it collects no personal information from children. It is rated 4+.</p>
+
+  <h2>7. Data sharing</h2>
+  <p>Because the app collects no data, no user data is sold, rented or shared with any third party.</p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>If a future version adds a feature that processes data, this page will be updated and the change will be noted in the release notes.</p>
+
+  <h2>9. Contact</h2>
+  <p>Questions about this policy: <a href="mailto:232235382@qq.com">232235382@qq.com</a></p>
+  </section>
 </main>
 
 <footer>
-  © 2026 DecHex · <a href="index.html">技术支持</a>
+  © 2026 DecHex · <a href="index.html">技术支持 Support</a>
 </footer>
 </body>
 </html>

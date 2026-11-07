@@ -14,16 +14,14 @@
 3. 在新仓库页面点 **uploading an existing file**，把 `index.html` 和 `privacy.html` 拖进去 → **Commit changes**
 4. 仓库 **Settings** → 左侧 **Pages**
 5. **Source** 选 `Deploy from a branch`，**Branch** 选 `main` + `/ (root)`，点 **Save**
-6. 等 1~2 分钟，页面顶部会出现网址：`https://<你的用户名>.github.io/dechex-site/`
+6. 等 1~2 分钟，页面顶部会出现网址：`https://tranjazz.github.io/dechex-site/`
 
 ## 填到 App Store Connect
 
 | 字段 | 填 |
 |---|---|
-| 隐私政策 URL | `https://<你的用户名>.github.io/dechex-site/privacy.html` |
-| 技术支持 URL | `https://<你的用户名>.github.io/dechex-site/` |
-
-把 `<你的用户名>` 换成你自己的 GitHub 用户名。
+| 隐私政策 URL | `https://tranjazz.github.io/dechex-site/privacy.html` |
+| 技术支持 URL | `https://tranjazz.github.io/dechex-site/` |
 
 ## 注意
 
